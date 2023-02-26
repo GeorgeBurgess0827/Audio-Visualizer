@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+	<link rel="stylesheet" href="loader.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="favicon1.png" type="image/x-icon">
+	<title>P5 Audio Visualizer</title>
+	<meta charset="utf-8" />
+
+</head>
+
+<body>
+
+	<!-- Loader  -->
+	<div class="loader">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </div>
+
+	<header class="header">
+		<h1 class="header__title">🎹 Audio Visualizer</h1>
+		<nav class="songs">
+			<a class="song" href="#" onclick="switchAudio(audio);">Siesta</a>
+			<a class="song" href="#" onclick="switchAudio(audio2);">Lofi</a>
+			<a class="song" href="#" onclick="switchAudio(audio3);">Classical</a>
+			<a class="song" href="#" onclick="switchAudio(audio4);">Rain</a>
+			<a class="song" href="#" onclick="switchAudio(audio5);">White Noise</a>
+		</nav>
+	</header>
+
+	<div class="content main">
+		<div class="canvas-wrapper">
+
+			<canvas id="canvas"></canvas>
+		</div>
+	</div>
+	<script src="./scripts/sketch.js"></script>
+	<script src="./scripts/loader.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'poppins', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background: #000;
+	overflow: hidden;
+	font-size: 0.85rem;
+}
+
+.song-1 {
+	color: #2376a5;
+}
+
+.song-2 {
+	color: #c83f2b;
+}
+
+.song-3 {
+	color: #1d3cbb;
+}
+
+.song-4 {
+	color: #ffeb3b;
+}
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+	cursor: pointer;
+
+}
+
+a:hover,
+a:focus {
+	
+	text-decoration: underline;
+}
+
+
+a:hover,
+a:focus::before,
+a:focus::after {
+	
+	content: '🎷';
+
+
+
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+
+/* Header */
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	
+	width: 100%;
+	padding: 2vmax;
+	z-index: 1;
+}
+
+.header__title {
+	font-size: 1em;
+	margin: 0;
+	padding: 0 1em;
+	color: #fff;
+}
+
+.header__tagline {
+	margin: 0;
+}
+
+/* Top Navigation Style */
+.links {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.icon {
+	display: inline-block;
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+/* song links */
+.songs {
+	margin: 0 0 0 3rem;
+	
+}
+
+.song {
+	margin: 0 1em 0.5em 0;
+	padding: 0 0 0.25em;
+}
+
+.song:hover,
+.song--current {
+	color: white;
+}
+
+/* Content */
+.content {
+	padding: 3em 0;
+}
+
+.content.main {
+	min-height: 100vh; 
+	padding: 0;
+}
+
+.canvas-wrapper {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+canvas {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%; 
+}
+
+
+
+.toggle-btn {
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: currentColor;
+	position: absolute;
+	bottom: 2vmax;   
+	border: 1px solid;
+	width: 255px;
+}
+
+
+
+.toggle-btn {
+	background: transparent;
+	color: currentColor;
+	right: 2vmax;
+}
+
+.toggle-btn:focus {
+	outline: none;
+}
+
+.toggle-btn:hover {
+	color: #fff;
+}
+
+.slider {
+	padding: 10px;
+	color: currentColor;
+	position: absolute;
+	bottom: 2vmax;   
+	border: 1px solid;
+	width: 255px;
+    cursor: pointer;
+}
+ 
+
+@media screen and (max-width: 55em) {
+	.header {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.songs {
+		width: 100%;
+		margin: 1em 0 0;
+		text-align: center;
+	}
+	.toggle-btn {
+		right: 10px;
+		bottom: 5.5em;
+		width: calc(100% - 20px);
+	}
+  .slider {
+		right: 10px;
+		bottom: 2.5em;
+		width: calc(100% - 20px);
+	}
+	
+}
+
+
+
+
+	
+
+
+
+/* width: 800px and height: 600px. */
